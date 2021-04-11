@@ -2,8 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Description>Tarefas de fundo com serviços hospedados em ASP.NET Core em WebAPI
+Referencia: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-5.0&amp;tabs=visual-studio</Description>
+    <Authors>Paulo PItte</Authors>
+    <Company>Paulo PItte</Company>
   </PropertyGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorkerAPIBackgroudServices.Services\WorkerAPIBackgroudServices.Services.csproj" />
+  </ItemGroup>
 
 </Project>

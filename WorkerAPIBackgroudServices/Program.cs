@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WorkerAPIBackgroudServices.Services;
 
 namespace WorkerAPIBackgroudServices
 {
@@ -15,6 +17,9 @@ namespace WorkerAPIBackgroudServices
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                }).ConfigureServices(servicesWorker =>
+                {
+                    servicesWorker.AddHostedService<BackgroundInfoWorker>();
                 });
     }
 }
